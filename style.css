@@ -1,0 +1,126 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('fundo.jpg');
+        background-size: cover; /* Faz a imagem cobrir toda a área */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+        background-position: center; /* Centraliza a imagem no fundo */
+    }
+
+    
+    
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw; 
+    height: 100vh; 
+    }
+
+    
+    
+    .box {
+      background-color: rgb(51, 51, 51, 0.9);
+      color: white;
+      text-align: center;
+      padding: 1em;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      width: 50%;
+      height: 80vh; 
+      position: relative;
+    }
+    
+    
+    .inner-header {
+    font-size: 2em;
+    width: 100%;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5em;
+    }
+    
+    .column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1em;
+      background-color: #ffffff33;
+      padding: 1em;
+      border-radius: 10px;
+    } 
+    
+    button {
+      padding: 0.75em 2.5em;
+      background-color: #3276b1;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+      text-decoration: none;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    button:hover {
+    background-color: #3276b1;
+    animation: pulsate 1s infinite;
+    }
+    
+    .container-imagens {
+        display: flex;
+        gap: 250px; /* Define o espaçamento entre as imagens */
+    }
+
+
+    /* dispositivos móveis */
+    @media only screen and (max-width: 600px) {
+      .content {
+        flex-direction: column;
+        gap: 1em;
+      }
+    
+      .inner-header {
+        font-size: 1.5em;
+      }
+    
+      button {
+        width: 100%;
+      }
+    }
+    /* ---------------- */
+    
+    @keyframes pulsate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
